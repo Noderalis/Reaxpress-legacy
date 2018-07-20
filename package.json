@@ -17,6 +17,11 @@
     "unreleased": true,
     "commitLimit": false
   },
+  "keywords": [
+    "typescript",
+    "react",
+    "fuse-box"
+  ],
   "jest": {
     "moduleFileExtensions": [
       "ts",
