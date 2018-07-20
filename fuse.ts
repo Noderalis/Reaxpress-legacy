@@ -44,7 +44,7 @@ function build(): Promise<BundleProducer> {
         path: '.',
         title: pkg.name,
       }),
-      PROD_ENV && QuantumPlugin({}),
+      PROD_ENV && QuantumPlugin({ bakeApiIntoBundle: true }),
     ],
   });
 
