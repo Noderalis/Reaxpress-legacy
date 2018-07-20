@@ -16,6 +16,8 @@
     "alwaysStrict": true,
     "baseUrl": ".",
     "outDir": "../out",
-    "typeRoots": ["typings"]
+    "typeRoots": ["typings"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }

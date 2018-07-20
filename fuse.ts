@@ -17,6 +17,9 @@ import {
   WebIndexPlugin,
 } from 'fuse-box';
 
+// tslint:disable-next-line
+const pkg = require('./package.json');
+
 let fuse: FuseBox;
 let app: Bundle;
 
@@ -36,7 +39,11 @@ function build(): Promise<BundleProducer> {
     plugins: [
       [SassPlugin(), CSSPlugin()],
       EnvPlugin({ NODE_ENV: PROD_ENV ? 'production' : 'development' }),
-      WebIndexPlugin({ template: 'resources/index.html', path: '.' }),
+      WebIndexPlugin({
+        template: 'resources/index.html',
+        path: '.',
+        title: pkg.name,
+      }),
       PROD_ENV && QuantumPlugin({}),
     ],
   });

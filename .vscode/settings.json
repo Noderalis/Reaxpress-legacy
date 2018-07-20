@@ -18,4 +18,5 @@
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "material-icon-theme",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
 }
