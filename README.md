@@ -11,6 +11,99 @@ Honestly, use it as you please. It's primarily meant for [Ebongarde](https://ebo
 Over time as I add play around more I'll add onto this repository
 so stay up to date! 🏁
 
+## Install
+
+> Make sure you have Node >= 8 installed
+
+Clone the repository via git:
+
+```bash
+git clone --depth=1 https://github.com/thegrimsilence/react-typescript-boilerplate.git your-project-name
+```
+
+and then install the dependencies:
+
+```bash
+$ cd your-project-name
+$ yarn
+```
+
+## Run
+
+Start `build:dev` to run the application in development mode. This allows for HMR (Hot Module Reloading) and File Watching to reload the application as you make changes.
+
+As you can see, the application (as is, without any additions you may add) compiled to a little less than a Megabyte in less than a second! ⌛👀
+
+```bash
+$ yarn build:dev
+--- FuseBox 3.4.0 ---
+  → Typescript config file:  \src\tsconfig.json
+  → Typescript forced script target: ESNext
+  → Applying automatic alias based on baseUrl in tsconfig.json
+  →
+        app => "~/app"
+        typings => "~/typings"
+  → Typescript script target: ESNext
+
+--------------------------
+Bundle "app"
+
+...
+
+size: 807.8 kB in 842ms
+
+-----------------------------------------------------------------
+Development server running http://localhost:4444 @ 3.4.0
+-----------------------------------------------------------------
+
+17:02:44: Client connected
+17:02:45: HMR is enabled
+```
+
+## Build
+
+Run `build:prod` to compile the application into `dist/`, this launches Fusebox's [Quantum](https://fuse-box.org/page/quantum) plugin.
+
+As you can see, the application (as is, without any additions you may add) compiled to a little less than a Megabyte in less than a second! ⌛👀 With Quantum, you can see that it's actually smaller than the development build thanks to [Dead Code Elimination](https://fuse-box.org/page/quantum#dead-code-elimination), [Tree Shaking](https://fuse-box.org/page/quantum#tree-shaking), and more!
+
+By default, the Fusebox API is exported into it's own file, `api.js`. You can change this by setting `bakeApiIntoBundle: true | bundleName`.
+
+```bash
+$ yarn build:prod
+--- FuseBox 3.4.0 ---
+  → Typescript config file:  \src\tsconfig.json
+  → Typescript forced script target: ESNext
+  → Applying automatic alias based on baseUrl in tsconfig.json
+  →
+        app => "~/app"
+        typings => "~/typings"
+  → Typescript script target: ESNext
+--------------------------
+Bundle "app"
+
+...
+
+size: 787.6 kB in 831ms
+
+  --------------
+
+Launching quantum core
+  → Generating abstraction, this may take a while
+  → Abstraction generated
+  → Process bundle app
+
+...
+
+  → Uglifying app...
+  → Using uglify-es because the target is greater than ES5 or es6 option is set
+  → Done uglifying app
+  size:  99.3 kB, 31.9 kB (gzipped)
+  → Uglifying api.js...
+  → Using uglify-es because the target is greater than ES5 or es6 option is set
+  → Done uglifying api.js
+  size:  246 Bytes, 164 Bytes (gzipped)
+```
+
 ## Areas of Interest
 
 > Or areas that may be weird to most devs...
@@ -73,3 +166,12 @@ So until this is fixed, this project is fixed to TypeScript@2.9.1
 
 There are of course some settings and recommendations in `.vscode/`. I love
 VS Code, and that's the end of that. Your editor, your preference.
+
+### Styling
+
+By default, you can import your styles via `import app/path/to/your/stylesheet.(css|scss)`.
+Of course, you don't have to conform to the non-relative module resolution. You can just as easily use `import ./stylesheet.(css|scss)`.
+
+## License
+
+MIT © [Adrian Roach](https://github.com/thegrimsilence)
