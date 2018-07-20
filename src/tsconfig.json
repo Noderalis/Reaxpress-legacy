@@ -5,7 +5,7 @@
     "jsx": "react",
     "noImplicitAny": false,
     "removeComments": false,
-    "preserveConstEnums": true,
+    "preserveConstEnums": true, 
     "target": "esnext",
     "sourceMap": false,
     "experimentalDecorators": true,
@@ -18,7 +18,8 @@
     "outDir": "../out",
     "typeRoots": ["typings"],
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["jest"]
   },
   "exclude": ["../node_modules", "../dist"]
 }

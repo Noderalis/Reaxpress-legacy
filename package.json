@@ -8,6 +8,7 @@
     "build:dev": "yarn clean && cross-env NODE_ENV=development ts-node fuse",
     "build:prod": "yarn clean && cross-env NODE_ENV=production ts-node fuse",
     "clean": "rimraf .fusebox dist",
+    "test": "jest",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "auto-changelog": {
@@ -28,7 +29,7 @@
       "js"
     ],
     "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
+      "^.+\\.(ts|tsx)$": "<rootDir>/testing/test-preprocessor.js"
     },
     "globals": {
       "ts-jest": {
@@ -36,17 +37,27 @@
       }
     },
     "testMatch": [
-      "**/__tests__/*.+(ts|tsx|js)"
+      "**/test/*.+(ts|tsx|js)"
+    ],
+    "setupFiles": [
+      "<rootDir>/testing/test-shim.js",
+      "<rootDir>/testing/test-setup.js"
     ]
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.12",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/jest": "^23.3.0",
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
+    "@types/react-test-renderer": "^16.0.1",
     "auto-changelog": "^1.7.2",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "fuse-box": "^3.4.0",
     "jest": "^23.4.1",
+    "react-test-renderer": "^16.4.1",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.0.1",
     "tslint": "^5.11.0",

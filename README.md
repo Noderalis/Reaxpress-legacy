@@ -104,6 +104,36 @@ Launching quantum core
   size:  246 Bytes, 164 Bytes (gzipped)
 ```
 
+## Testing
+
+This boilerplate uses jest and enzyme to test your components.
+
+You can run the current test via:
+
+```bash
+$ yarn test
+PASS  src/app/App/test/App.test.tsx
+  Simple tests
+    √ should render without error (9ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        3.287s
+Ran all test suites.
+```
+
+Due to transpiling errors, you must use relative-path module resolution to call to your components:
+
+```typescript
+// app/App/test/App.test.tsx
+import { App } from '../App';
+```
+
+## Recommended Setup
+
+I recommend
+
 ## Areas of Interest
 
 > Or areas that may be weird to most devs...
