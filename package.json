@@ -13,7 +13,7 @@
   },
   "auto-changelog": {
     "output": "CHANGELOG.md",
-    "template": "json",
+    "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
   },
