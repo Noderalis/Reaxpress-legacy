@@ -9,9 +9,11 @@
 import {
   Bundle,
   BundleProducer,
+  CSSPlugin,
   EnvPlugin,
   FuseBox,
   QuantumPlugin,
+  SassPlugin,
   WebIndexPlugin,
 } from 'fuse-box';
 
@@ -30,10 +32,12 @@ function build(): Promise<BundleProducer> {
     homeDir: 'src',
     output: 'dist/$name.js',
     target: 'browser@esnext',
+    cache: DEV_ENV,
     plugins: [
+      [SassPlugin(), CSSPlugin()],
       EnvPlugin({ NODE_ENV: PROD_ENV ? 'production' : 'development' }),
       WebIndexPlugin({ template: 'resources/index.html', path: '.' }),
-      PROD_ENV && QuantumPlugin({})
+      PROD_ENV && QuantumPlugin({}),
     ],
   });
 
