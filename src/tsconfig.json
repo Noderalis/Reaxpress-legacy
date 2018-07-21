@@ -5,7 +5,7 @@
     "jsx": "react",
     "noImplicitAny": false,
     "removeComments": false,
-    "preserveConstEnums": true, 
+    "preserveConstEnums": true,
     "target": "esnext",
     "sourceMap": false,
     "experimentalDecorators": true,
@@ -16,10 +16,10 @@
     "alwaysStrict": true,
     "baseUrl": ".",
     "outDir": "../out",
-    "typeRoots": ["typings"],
+    "typeRoots": ["typings", "../node_modules/@types"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["jest"]
+    "types": ["jest", "node"]
   },
-  "exclude": ["../node_modules", "../dist"]
+  "exclude": ["../dist"]
 }
