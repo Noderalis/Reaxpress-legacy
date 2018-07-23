@@ -8,6 +8,7 @@
     "build:dev": "yarn clean && cross-env NODE_ENV=development ts-node fuse",
     "build:prod": "yarn clean && cross-env NODE_ENV=production ts-node fuse",
     "clean": "rimraf .fusebox dist",
+    "clean-slate": "rimraf .fusebox dist node_modules && yarn",
     "test": "jest",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
