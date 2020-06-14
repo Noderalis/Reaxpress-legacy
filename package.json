@@ -9,20 +9,8 @@
     "build:prod": "yarn clean && cross-env NODE_ENV=production ts-node fuse",
     "clean": "rimraf .fusebox dist",
     "clean-slate": "rimraf .fusebox dist node_modules && yarn",
-    "test": "jest",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "test": "jest"
   },
-  "auto-changelog": {
-    "output": "CHANGELOG.md",
-    "template": "keepachangelog",
-    "unreleased": true,
-    "commitLimit": false
-  },
-  "keywords": [
-    "typescript",
-    "react",
-    "fuse-box"
-  ],
   "jest": {
     "moduleFileExtensions": [
       "ts",
@@ -45,6 +33,11 @@
       "<rootDir>/testing/test-setup.js"
     ]
   },
+  "dependencies": {
+    "node-sass": "^4.9.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
   "devDependencies": {
     "@types/enzyme": "^3.1.12",
     "@types/enzyme-adapter-react-16": "^1.0.2",
@@ -65,10 +58,5 @@
     "tslint-react": "^3.6.0",
     "typescript": "2.9.1",
     "uglify-es": "^3.3.9"
-  },
-  "dependencies": {
-    "node-sass": "^4.9.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
   }
 }
