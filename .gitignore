@@ -1,4 +1,13 @@
-.fusebox/
-node_modules/
+# Yarn 2
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
+
+# Typescript
 dist/
-yarn-error.log
+ignorable-build-cache.json
+
+# Webpack Cache
+node_modules/
