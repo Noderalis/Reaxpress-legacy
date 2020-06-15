@@ -1,14 +1,17 @@
 {
-  "editor.tabSize": 2,
-  "files.eol": "\n",
-  "typescript.tsdk": ".vscode/pnpify/typescript/lib",
-  "npm.packageManager": "yarn",
-  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  // Yarn 2
+  "eslint.nodePath": ".yarn/pnpify",
+  "prettier.prettierPath": ".yarn/pnpify/prettier/index.js",
+  "typescript.tsdk": ".yarn/pnpify/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // ESLint
   "eslint.enable": true,
-  "eslint.nodePath": ".vscode/pnpify",
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  // VS Code
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "prettier.prettierPath": ".vscode/pnpify/prettier/index.js"
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "npm.packageManager": "yarn"
 }
