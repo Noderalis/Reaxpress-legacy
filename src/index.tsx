@@ -1,5 +1,5 @@
-import { App } from 'app/App/App';
-import 'app/index.scss';
+import { App } from 'domain/Home/App';
+import 'domain/index.scss';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
