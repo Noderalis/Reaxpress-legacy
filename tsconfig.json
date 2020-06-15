@@ -14,7 +14,7 @@
     "jsx": "react",
     "alwaysStrict": true,
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    // "baseUrl": "./src",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
