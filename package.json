@@ -5,15 +5,18 @@
   "author": "Grim <silencegrim@gmail.com>",
   "license": "MIT",
   "private": true,
-  "hostname": "localhost",
+  "hostname": "http://localhost",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "NODE_ENV=production && yarn _webpack",
-    "lint": "eslint './src/**/*' --ext .ts,.tsx,.js,.jsx --fix",
+    "lint": "eslint './packages/**/*' --ext .ts,.tsx,.js,.jsx --fix",
+    "start": "yarn nodemon build/server.js",
     "test": "jest --detectOpenHandles --config config/tools/jest.config.js",
     "_webpack": "webpack-cli --config ./config/webpack.config.ts"
   },
   "dependencies": {
-    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -28,7 +31,6 @@
     "@types/enzyme-adapter-react-16": "^1",
     "@types/eslint": "^7",
     "@types/eslint-plugin-prettier": "^3",
-    "@types/express": "^4",
     "@types/jest": "^26.0.0",
     "@types/mini-css-extract-plugin": "^0",
     "@types/node": "^14.0.13",
@@ -58,8 +60,10 @@
     "jest-environment-node": "^26.0.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
     "pnp-webpack-plugin": "^1.6.4",
     "prettier": "^2.0.5",
+    "sass-loader": "^8.0.2",
     "source-map-loader": "^1.0.0",
     "style-loader": "^1.2.1",
     "supertest": "^4.0.2",

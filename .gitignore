@@ -10,5 +10,5 @@
 dist/
 ignorable-build-cache.json
 
-# Webpack Cache
+# Webpack Plugins
 node_modules/

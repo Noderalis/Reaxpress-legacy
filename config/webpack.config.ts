@@ -4,6 +4,7 @@ import { cpus } from 'os';
 import { Configuration, ProgressPlugin } from 'webpack';
 import merge from 'webpack-merge';
 import frontend from './frontend.config';
+import server from './server.config';
 import isProductionBuild from './util/env';
 import paths from './util/paths';
 const PnpPlugin = require('pnp-webpack-plugin');
@@ -66,8 +67,8 @@ const config: Configuration = merge(
       new TsCheckerPlugin({
         async: !isProductionBuild,
         eslint: {
-          enabled: true,
-          files: '../src/**/*',
+          enabled: false, // TODO resolve parsing errors for html and sass
+          files: './packages/**/*',
         },
         typescript: {
           build: true,
@@ -92,6 +93,7 @@ const config: Configuration = merge(
     watch: !isProductionBuild,
   } as Configuration,
   frontend as Configuration,
+  server as Configuration,
   {
     plugins: [
       {

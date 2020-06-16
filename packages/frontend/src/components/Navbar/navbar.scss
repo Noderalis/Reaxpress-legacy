@@ -1,0 +1,13 @@
+@import '../../colors';
+
+.navbar {
+  height: 60px;
+  background-color: $bfl-light;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin: 0 5px 0 5px;
+    }
+  }
+}

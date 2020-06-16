@@ -14,18 +14,20 @@ const root = (pathToFile: string, filename?: string) =>
 const paths = {
   source: {
     frontend: {
-      app: root('frontend/src/app', 'index.tsx'),
-      root: root('frontend'),
-      server: root('frontend/src/server', 'server.ts'),
+      app: root('packages/frontend/src/', 'index.tsx'),
+      root: root('packages/frontend'),
+    },
+    backend: {
+      server: root('packages/backend/src', 'server.ts'),
     },
     template: {
-      html: root('frontend/public', 'index.html'),
+      html: root('packages/frontend/public', 'index.html'),
     },
   },
   build: {
-    root: root('build'),
+    root: root('dist'),
     public: {
-      html: root('build/public', 'index.html'),
+      html: root('dist/public', 'index.html'),
     },
   },
   config: {
