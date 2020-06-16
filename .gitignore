@@ -4,10 +4,11 @@
 !.yarn/releases
 !.yarn/plugins
 !.yarn/versions
+!.yarn/pnpify
 
 # Typescript
 dist/
 ignorable-build-cache.json
 
-# Webpack Cache
+# Webpack Plugins
 node_modules/

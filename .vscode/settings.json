@@ -1,22 +1,17 @@
 {
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
+  // Yarn 2
+  "eslint.nodePath": ".yarn/pnpify",
+  "prettier.prettierPath": ".yarn/pnpify/prettier/index.js",
+  "typescript.tsdk": ".yarn/pnpify/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // ESLint
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  // VS Code
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.tabSize": 2,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 2000,
-  "javascript.preferences.quoteStyle": "single",
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "npm.enableScriptExplorer": true,
-  "prettier.arrowParens": "always",
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-  "typescript.format.insertSpaceAfterConstructor": true,
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "material-icon-theme",
-  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "files.eol": "\n",
+  "npm.packageManager": "yarn"
 }
