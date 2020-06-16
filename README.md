@@ -1,6 +1,6 @@
-# Yarn 2 React TypeScript Starter 💼
+# bfl-y2twrs 💼
 
-This repository, aka Y2RTS, is a true starter for people wanting to develop a React application using Yarn 2, Webpack, and TypeScript. If you want to incorporate microservices, check out the sister repository, [Y2WT](https://github.com/TheGrimSilence/yarn-2-webpcack-typescript-starter.git). I may actually pull various repos into a _Yarnberry Cobbler_ Organization. I'm not sure though.
+This repository, aka Y2TWRS, is a true starter for people wanting to develop a React application using Yarn 2 and it's worspaces, Webpack and TypeScript for building, and React + Sass for the frontend. If you want to incorporate microservices, check out the sister repository, [Y2WT](https://github.com/TheGrimSilence/yarn-2-webpcack-typescript-starter.git).
 
 ## Usage 🚀
 

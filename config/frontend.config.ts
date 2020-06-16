@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import { CleanWebpackPlugin as CleanPlugin } from 'clean-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
 import CssPlugin from 'mini-css-extract-plugin';
 import { Configuration } from 'webpack';
@@ -20,6 +21,10 @@ const frontend: Configuration = {
         ],
       },
     ],
+  },
+  output: {
+    filename: '[name].js',
+    path: paths.build.frontend.root,
   },
   plugins: [
     new HtmlPlugin({
@@ -52,7 +57,9 @@ const frontend: Configuration = {
       filename: `static/css/[contentHash:16].css`,
       chunkFilename: `static/css/[contentHash:16].chunk.css`,
     }),
+    new CleanPlugin({ verbose: !isProductionBuild }),
   ],
+  target: 'web',
 };
 
 export default frontend;

@@ -1,4 +1,4 @@
-# Y2WT Frontend
+# Y2TWRS Frontend
 
 In order to push the limits and be more than a simple starter, I'm using a sort of microservice architecture that you can delete if you want. This also powers some of my upcoming software at [Blackfall Labs](https://blackfall-labs.com). 
 

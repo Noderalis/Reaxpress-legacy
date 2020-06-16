@@ -25,9 +25,15 @@ const paths = {
     },
   },
   build: {
+    frontend: {
+      root: root('dist/frontend'),
+    },
+    backend: {
+      root: root('dist/backend'),
+    },
     root: root('dist'),
     public: {
-      html: root('dist/public', 'index.html'),
+      html: root('dist/frontend/public', 'index.html'),
     },
   },
   config: {

@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-boilerplate",
+  "name": "bfl-y2twrs",
   "version": "2.0.0",
-  "repository": "https://github.com/TheGrimSilence/react-typescript-boilerplate.git",
+  "repository": "https://github.com/TheGrimSilence/bfl-y2twrs.git",
   "author": "Grim <silencegrim@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -12,9 +12,9 @@
   "scripts": {
     "build": "NODE_ENV=production && yarn _webpack",
     "lint": "eslint './packages/**/*' --ext .ts,.tsx,.js,.jsx --fix",
-    "start": "yarn nodemon build/server.js",
+    "start": "yarn nodemon dist/backend/server.js",
     "test": "jest --detectOpenHandles --config config/tools/jest.config.js",
-    "_webpack": "webpack-cli --config ./config/webpack.config.ts"
+    "_webpack": "parallel-webpack --config ./config/webpack.config.ts"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -61,6 +61,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
+    "parallel-webpack": "^2.6.0",
     "pnp-webpack-plugin": "^1.6.4",
     "prettier": "^2.0.5",
     "sass-loader": "^8.0.2",
