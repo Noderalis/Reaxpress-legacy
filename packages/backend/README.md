@@ -1,6 +1,8 @@
-# Y2RTS Backend
+# Reaxpress Backend
 
-Here is where you'll find the main express server that serves your frontend application, and where you can also store any [services](#services) or whatever else you want.
+Here is where you'll find the main Express server that serves your frontend application, and where you can also store any [services](#services) or whatever else you want.
+
+<!-- stored for Microservice recipes...
 
 ## Services
 
@@ -22,3 +24,5 @@ Ideally you can put whatever you think is a service in here. However, I recommen
 > - As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time.
 
 I'll be making a microservice-specific recipe at some point, so when that's up you may find those more interesting.
+
+-->
