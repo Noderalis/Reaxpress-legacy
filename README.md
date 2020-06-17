@@ -10,9 +10,7 @@ This repository, aka BFL-Y2TWRS (I suck at naming so I SKUd it and other sister 
 - React
 - Sass
 
-If you've stumbled upon this repository congratulations 🎉
-
-Honestly, use it as you please. It's primarily meant for [Blackfall-Labs](https://blackfall-labs.com) and myself to speed up development on developing applications.
+Hopefully, you'll find this useful. It's primarily meant for [Blackfall-Labs](https://blackfall-labs.com) and myself to speed up development on developing applications.
 
 This repository is a simple React application served over Express using Yarn 2 workspaces for cleaner dependency management. This is one of many recipes in my [Yarnberry Cookbook](https://github.com/yarnberry-cookbook), stupid name I know.
 
@@ -30,9 +28,9 @@ Or use GitHub to make a [new repository](https://github.com/Yarnberry-Cookbook/y
 
 ~~and then install the dependencies:~~
 
-As of 2.0, Y2TWRS uses Yarn 2, which defaults to a [_zero-install_](https://yarnpkg.com/features/zero-installs) state, meaning all you have to do is run `yarn rebuild` to get started. This rebuilds _unplugged_ packages such as `node-sass` which I don't include with the repository. `.yarn/unplugged`, depending on what you require, gets too heavy to push to the repository when using packages like [_puppeteer_](https://yarnpkg.com/package/puppeteer) which ships with large executables. If you want to make this completely [_zero-install friendly_](https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored), add `!.yarn/unplugged` to your `.gitignore`. and make sure you add larger files to Git LFS otherwise GitHub and others may revoke your ability to push to your remote repository. 
+As of 2.0, Y2TWRS uses Yarn 2, which defaults to a [_zero-install_](https://yarnpkg.com/features/zero-installs) state, meaning all you have to do is run `yarn rebuild` to get started. This rebuilds _unplugged_ packages such as `node-sass` which I don't include with the repository. `.yarn/unplugged`, depending on what you require, gets too heavy to push to the repository when using packages like [_puppeteer_](https://yarnpkg.com/package/puppeteer) which ships with large executables. If you want to make this completely [_zero-install friendly_](https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored), add `!.yarn/unplugged` to your `.gitignore`. and make sure you add larger files to Git LFS otherwise GitHub and others may revoke your ability to push to your remote repository.
 
-Just run `rebuild`, yarn will build the required dependencies under `unplugged` and everything will *just work*. Thank you Yarn Modern!
+Just run `rebuild`, yarn will build the required dependencies under `unplugged` and everything will _just work_. Thank you Yarn Modern!
 
 ```bash
 PS C:\...> <your-project-name>
