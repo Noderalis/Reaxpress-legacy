@@ -28,10 +28,10 @@ jobs:
         run: yarn rebuild
 
       - name: Build project
-        run: echo "Building current unsupported"
+        run: echo "Building currently unsupported..."
 
       - name: Test servers
-        run: echo "Must build before testing."
+        run: echo "You must build before testing..."
 
       - name: Peek directory structure
         run: ls -la
