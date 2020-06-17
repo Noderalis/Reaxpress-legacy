@@ -10,8 +10,6 @@ This repository, aka BFL-Y2TWRS (I suck at naming so I SKUd it and other sister 
 - React
 - Sass
 
-## Usage
-
 If you've stumbled upon this repository congratulations 🎉
 
 Honestly, use it as you please. It's primarily meant for [Blackfall-Labs](https://blackfall-labs.com) and myself to speed up development on developing applications.
