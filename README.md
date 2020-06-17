@@ -1,8 +1,8 @@
-# bfl-y2twrs 💼
+# bfl-y2twrs 
 
 This repository, aka Y2TWRS, is a true starter for people wanting to develop a React application using Yarn 2 and it's worspaces, Webpack and TypeScript for building, and React + Sass for the frontend. If you want to incorporate microservices, check out the sister repository, [Y2WT](https://github.com/TheGrimSilence/yarn-2-webpcack-typescript-starter.git).
 
-## Usage 🚀
+## Usage 
 
 If you've stumbled upon this repository congratulations 🎉
 
